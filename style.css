@@ -6,9 +6,9 @@
 
 body:before {
   content: "";
-  background: #535971;
+  background: #293241;
   width: 100%;
-  height: 436px;
+  height: 465px;
 
   position: absolute;
   left: 0;
@@ -17,7 +17,7 @@ body:before {
 }
 
 body {
-  background: #efefef;
+  background: #bfd7e4;
 }
 
 body {
@@ -30,50 +30,70 @@ body {
 }
 
 header {
-  width: 319px;
-  margin-top: 74px;
+  width: 391px;
+  margin: 93px auto 32px;
+  text-align: center;
 }
 
 header h1 {
   color: #fff;
-  font-size: 48px;
+  font-size: 36px;
   font-family: Staatliches;
   font-weight: 400;
 }
 
 header p {
   color: #fff;
-  font-size: 20px;
-  margin: 18px auto 58px;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 form {
-  margin-top: 38px;
   background: #fafafc;
   min-height: 300px;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0 0 20px 20px;
 
-  padding: 64px;
+  padding: 30px 64px 64px;
 
   display: flex;
   flex-direction: column;
   gap: 48px;
+
+  margin-bottom: 200px;
 }
 
 fieldset {
   border: none;
 }
 
-.input-wrapper {
-  margin-bottom: 16px;
+
+
+#subheader {
+  color: #fff;
+  font-size: 24px;
+  font-family: Staatliches;
+
+  width: 750px;
+  height: 133px;
+
+  border-radius: 20px 20px 0px 0px;
+  background: #f67669;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 32px;
 }
 
 .fieldset-wrapper legend {
-  color: #535971;
+  color: #253B51;
   font-size: 24px;
   font-family: Staatliches;
   font-weight: 400;
   line-height: 34px;
+  text-align: center;
+
   padding-bottom: 8px;
   margin-bottom: 36px;
 
@@ -95,18 +115,26 @@ fieldset {
   color: #4e4958;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+select,
+textarea {
   width: 100%;
   height: 56px;
 
   border-radius: 8px;
   border: 1px solid #e6e6f0;
   background: #fafafc;
-  padding: 24px;
+  padding: 12px;
+  margin-bottom: 30px;
 
   font-family: "Poppins", sans-serif;
   color: #535971;
   font-size: 16px;
+}
+
+.input-wrapper textarea {
+  width: 608px;
+  resize: none;
 }
 
 .col-2 {
@@ -118,12 +146,37 @@ fieldset {
   width: 300px;
 }
 
-fieldset p {
-  color: #535971;
-  font-size: 20px;
-  font-family: Staatliches;
-  line-height: 34px;
-  margin-bottom: 8px;
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 16px;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background: url(./img/check.svg);
 }
 
 .col-3 {
@@ -135,36 +188,24 @@ fieldset p {
   width: 100%;
 }
 
-footer {
-  width: 750px;
-  height: 160px;
-
-  border-radius: 0px 0px 20px 20px;
-  background: #535971;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  margin-bottom: 200px;
-}
-
 button {
-  width: 608px;
-  height: 55px;
+  width: 622px;
+  height: 51px;
   padding: 15px 40px;
 
-  border-radius: 20px;
-  background: #ff5374;
+  border-radius: 8px;
+  background: #f67669;
+  border: none;
 
   color: #fff;
   font-size: 20px;
   font-family: Staatliches;
-  
-  }
+
+  margin-top: 30px;
+}
 
 button:hover {
-  background: #b33851;
+  background: #be5b50;
   cursor: pointer;
 }
 
